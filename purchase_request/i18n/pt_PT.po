@@ -34,67 +34,67 @@ msgid "<li><b>%s</b>: Received quantity %s %s</li>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Analytic Account</strong>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Assigned to:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Creation Date:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Description:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Description</strong>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Picking Type:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Product UoM</strong>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Qty</strong>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Request Reference:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Requested Date</strong>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Requested by:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Source:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
 msgid "<strong>Specifications</strong>"
 msgstr ""
 
@@ -116,18 +116,18 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_analytic_account_id
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Analytic Account"
 msgstr "Conta Analítica"
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Approve"
 msgstr "Aprovar"
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 #: selection:purchase.request,state:0
 msgid "Approved"
 msgstr "Aprovada"
@@ -139,34 +139,34 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_assigned_to
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Assigned to"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Assigned to me"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "At least a Draft PO has been created"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "At least a PO has been completed"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "At least a PO has been confirmed"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
 msgid "Cancel"
 msgstr ""
 
@@ -201,7 +201,7 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.actions.act_window,name:purchase_request.action_purchase_request_line_make_purchase_order
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
 #, fuzzy
 msgid "Create RFQ"
 msgstr "Criado por"
@@ -247,7 +247,7 @@ msgid "Description"
 msgstr "Descrição"
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
 msgid "Details"
 msgstr ""
 
@@ -260,8 +260,8 @@ msgid "Display Name"
 msgstr "Nome a Apresentar"
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 #: selection:purchase.request,state:0
 msgid "Done"
 msgstr ""
@@ -272,8 +272,8 @@ msgid "Downstream Moves"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 #: selection:purchase.request,state:0
 msgid "Draft"
 msgstr "Rascunho"
@@ -291,24 +291,24 @@ msgid "Enter a supplier."
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
 msgid "Existing RFQ to update:"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
 #, fuzzy
 msgid "Group By"
 msgstr "Agrupar Por..."
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Group By..."
 msgstr "Agrupar Por..."
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
 msgid "Hide cancelled lines"
 msgstr ""
 
@@ -356,12 +356,12 @@ msgid "Last Updated on"
 msgstr "Atualizado pela última vez em"
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Lines"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
 msgid "Manual Invoices"
 msgstr ""
 
@@ -376,23 +376,23 @@ msgid "Minimum Inventory Rule"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "My requests"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_line_make_purchase_order
 msgid "New PO details:"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "No RFQ or Purchase has been created"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
 msgid "Order Reference"
 msgstr ""
 
@@ -430,7 +430,7 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item_product_id
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_product_id
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Product"
 msgstr ""
 
@@ -445,8 +445,8 @@ msgid "Product Unit of Measure"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Products"
 msgstr ""
 
@@ -456,12 +456,12 @@ msgid "Products to Purchase"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Purchase Confirmed"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Purchase Done"
 msgstr ""
 
@@ -478,10 +478,10 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_purchase_lines
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree_sub
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Purchase Order Lines"
 msgstr ""
 
@@ -493,10 +493,10 @@ msgstr ""
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item_request_id
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_request_id
 #: model:ir.module.category,name:purchase_request.module_category_purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.report_purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_tree
+#: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_tree
 msgid "Purchase Request"
 msgstr ""
 
@@ -515,7 +515,7 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.model,name:purchase_request.model_purchase_request_line
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_make_purchase_order_item_line_id
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
 msgid "Purchase Request Line"
 msgstr ""
 
@@ -540,9 +540,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line_purchase_request_lines
 #: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line
 #: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line_act
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_tree
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_tree
 #, python-format
 msgid "Purchase Request Lines"
 msgstr ""
@@ -574,8 +574,8 @@ msgid "Purchase Request is done"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_form
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree
 msgid "Purchase Request lines"
 msgstr ""
 
@@ -602,7 +602,7 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_purchase_state
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Purchase Status"
 msgstr ""
 
@@ -612,7 +612,7 @@ msgid "Purchase requests"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Purchasing not started"
 msgstr ""
 
@@ -644,19 +644,19 @@ msgid "Receipt confirmation %s for your Request %s"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Reject"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 #: selection:purchase.request,state:0
 msgid "Rejected"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Request"
 msgstr ""
 
@@ -672,30 +672,30 @@ msgid "Request Reference"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Request approval"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Request is approved"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Request is done"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Request is rejected"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Request is to be approved"
 msgstr ""
 
@@ -705,36 +705,36 @@ msgid "Request state"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Request status"
 msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_requested_by
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_requested_by
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Requested by"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Requested for Quotation"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Reset"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
 msgid "Search Purchase Order Line"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Search Purchase Request"
 msgstr ""
 
@@ -746,7 +746,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Source"
 msgstr ""
 
@@ -758,13 +758,13 @@ msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line_specifications
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 msgid "Specifications"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Start Date"
 msgstr ""
 
@@ -779,7 +779,7 @@ msgid "Stock Move"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_form2_sub
 msgid "Stock Moves"
 msgstr ""
 
@@ -811,8 +811,8 @@ msgid "The purchase has already been completed."
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "To Approve"
 msgstr ""
 
@@ -833,22 +833,22 @@ msgid "Transfer"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Unassigned"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Unassigned Request"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 msgid "Uncancelled"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
 msgid "Unread Messages"
 msgstr "Mensagens não lidas"
 
@@ -858,8 +858,8 @@ msgid "UoM"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
-#: model:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_tree_sub
 msgid "Vendor"
 msgstr ""
 
