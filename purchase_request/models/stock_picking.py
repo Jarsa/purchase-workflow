@@ -13,8 +13,9 @@ class StockPicking(models.Model):
                                                           request_dict):
         if not request_dict:
             request_dict = {}
-        title = _('Receipt confirmation %s for your Request %s') % (
-            picking.name, request.name)
+        title = _(
+            'Receipt confirmation ' + str(
+                picking.name) + ' for your Request ' + str(request.name))
         message = '<h3>%s</h3>' % title
         message += _('The following requested items from Purchase Request %s '
                      'have now been received in Incoming Shipment %s:') % (
