@@ -102,3 +102,25 @@ class PurchaseOrderLine(models.Model):
                 'view_type': 'form',
                 'view_mode': 'tree,form',
                 'domain': domain}
+
+    @api.multi
+    def _validate_product_in_purchase_request(self):
+        self.ensure_one()
+        if self.purchase_request_lines:
+            product = self.purchase_request_lines.mapped('product_id')
+        else:
+            return False
+        if self.product_id not in product:
+            raise exceptions.UserError(
+                _('You cannot change the product of this line.\n'
+                  'It is related to a request with product %s') %
+                product.display_name)
+
+    @api.constrains('product_id')
+    def _check_product_in_purchase_request_lines(self):
+        self._validate_product_in_purchase_request()
+
+    @api.onchange('product_id')
+    def _onchange_product_id(self):
+        if self.product_id:
+            self._validate_product_in_purchase_request()

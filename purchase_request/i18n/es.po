@@ -912,3 +912,11 @@ msgstr ""
 #, python-format
 msgid "You have to select lines from the same company."
 msgstr ""
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_order.py:115
+#, python-format
+msgid "You cannot change the product of this line.\n"
+"It is related to a request with product %s"
+msgstr "No puede cambiar el producto de esta línea.\n"
+"Está relacionada con una solicitud por el producto %s"
