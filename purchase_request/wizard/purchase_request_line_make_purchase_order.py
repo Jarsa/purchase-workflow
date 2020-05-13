@@ -220,6 +220,7 @@ class PurchaseRequestLineMakePurchaseOrder(models.TransientModel):
                     line.company_id,
                     line.origin)
                 purchase = purchase_obj.create(po_data)
+                purchase.onchange_partner_id()
 
             # Look for any other PO line in the selected PO with same
             # product and UoM to sum quantities instead of creating a new
