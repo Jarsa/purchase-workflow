@@ -7,7 +7,9 @@
     "summary": "When a PO is created from an stock rule this module verifes "
                "the product supplier info of the product to create PO "
                "per currency",
-    "author": "Jarsa Sistemas S.A. de C.V., MtNet Services, SA de CV., Odoo Community Association (OCA)",
+    "author": "Jarsa Sistemas S.A. de C.V., "
+              "MtNet Services, SA de CV., "
+              "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/purchase-workflow",
     "category": "Purchase Management",
     "license": "AGPL-3",
