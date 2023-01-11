@@ -47,6 +47,7 @@
                 <field
                     name="analytic_tag_ids"
                     groups="analytic.group_analytic_accounting"
+                    widget="many2many_tags"
                 />
                 <field name="supplier_id" />
                 <field
@@ -136,6 +137,7 @@
                             <field
                                 name="analytic_tag_ids"
                                 groups="analytic.group_analytic_accounting"
+                                widget="many2many_tags"
                                 attrs="{'readonly': [('is_editable','=', False)]}"
                             />
                             <field
@@ -587,6 +589,7 @@
                             />
                         <field
                                 name="analytic_tag_ids"
+                                widget="many2many_tags"
                                 groups="analytic.group_analytic_accounting"
                                 attrs="{'readonly': [('is_editable','=', False)]}"
                             />
