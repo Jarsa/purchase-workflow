@@ -1,7 +1,3 @@
-# Copyright 2020, Jarsa Sistemas, S.A. de C.V.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
-
 from odoo import api, models
 
 
@@ -58,6 +54,9 @@ class AccountMove(models.Model):
 
         # Compute invoice_payment_ref.
         if len(refs) == 1:
-            self.invoice_payment_ref = refs[0]
+            self.payment_reference = refs[0]
 
         self.purchase_id = False
+        self._onchange_currency()
+        bank = self.bank_partner_id.bank_ids and self.bank_partner_id.bank_ids[0]
+        self.partner_bank_id = bank
