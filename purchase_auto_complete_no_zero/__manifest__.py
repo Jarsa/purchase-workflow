@@ -3,7 +3,7 @@
 {
     "name": "Purchase auto complete no zero",
     "summary": "Avoid creating zero-quantity lines when creating a vendor bill.",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Purchases",
     "website": "https://github.com/OCA/purchase-workflow",
     "author": "Jarsa, Odoo Community Association (OCA)",
