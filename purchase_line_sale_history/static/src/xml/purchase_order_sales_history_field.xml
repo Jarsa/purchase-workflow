@@ -2,14 +2,30 @@
 <templates xml:space="preserve">
 
     <t t-name="purchase_line_sale_history.SalesHistoryField">
-        <div class="o_purchase_sales_history" t-if="historyData">
-            <div class="o_purchase_sales_history_header">
-                <span class="text-muted small text-uppercase">
-                    Sales History
+        <div
+            t-if="historyData"
+            t-attf-class="o_purchase_sales_history #{state.collapsed ? 'o_purchase_sales_history_collapsed' : ''}"
+        >
+            <button
+                type="button"
+                class="o_purchase_sales_history_header"
+                t-on-click="toggleCollapse"
+                t-att-aria-expanded="!state.collapsed ? 'true' : 'false'"
+            >
+                <span class="o_purchase_sales_history_header_text">
+                    <span class="text-muted small text-uppercase">
+                        Sales History
+                    </span>
+                    <strong t-esc="historyData.product_name" />
                 </span>
-                <strong t-esc="historyData.product_name" />
-            </div>
-            <div class="o_purchase_sales_history_scroll">
+                <i
+                    t-attf-class="fa #{state.collapsed ? 'fa-chevron-up' : 'fa-chevron-down'} o_purchase_sales_history_toggle_icon"
+                />
+            </button>
+            <div
+                class="o_purchase_sales_history_scroll"
+                t-if="!state.collapsed"
+            >
                 <table class="table table-sm o_purchase_sales_history_table">
                     <thead>
                         <tr>
