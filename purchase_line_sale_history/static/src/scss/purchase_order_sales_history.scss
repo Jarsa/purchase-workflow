@@ -2,24 +2,75 @@
 // License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 // Odoo backend palette reference: primary #714B67
 
+// Floats over the form instead of sitting in the normal document flow:
+// with many order lines, an in-flow (or merely sticky-header) panel is
+// still pushed below the fold and needs an initial scroll to be reached
+// at all. Anchored to the viewport, it is visible with zero scrolling
+// regardless of line count.
 .o_purchase_sales_history {
-    margin: 4px 0 16px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: $zindex-fixed;
+    width: 480px;
+    max-width: calc(100vw - 32px);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
     border: 1px solid $border-color;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: $o-view-background-color;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+    @include media-breakpoint-down(md) {
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        width: auto;
+        max-width: none;
+    }
 
     .o_purchase_sales_history_header {
         display: flex;
-        flex-direction: column;
-        padding: 8px 12px 4px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        width: 100%;
+        padding: 8px 12px;
+        border: 0;
+        background-color: transparent;
+        text-align: start;
+        cursor: pointer;
 
-        strong {
-            font-size: 0.9rem;
+        &:hover {
+            background-color: darken($o-view-background-color, 3%);
+        }
+
+        .o_purchase_sales_history_header_text {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+
+            strong {
+                font-size: 0.9rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        .o_purchase_sales_history_toggle_icon {
+            flex: 0 0 auto;
+            color: $text-muted;
         }
     }
 
+    &:not(.o_purchase_sales_history_collapsed) .o_purchase_sales_history_header {
+        border-bottom: 1px solid $border-color;
+    }
+
     .o_purchase_sales_history_scroll {
-        overflow-x: auto;
+        overflow: auto;
         padding: 0 12px 12px;
     }
 
