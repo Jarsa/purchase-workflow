@@ -1,4 +1,4 @@
-import {Component} from "@odoo/owl";
+import {Component, useState} from "@odoo/owl";
 import {registry} from "@web/core/registry";
 import {standardFieldProps} from "@web/views/fields/standard_field_props";
 
@@ -17,6 +17,19 @@ import {standardFieldProps} from "@web/views/fields/standard_field_props";
 export class PurchaseSalesHistoryField extends Component {
     static template = "purchase_line_sale_history.SalesHistoryField";
     static props = {...standardFieldProps};
+
+    setup() {
+        // Floats over the form (fixed to the viewport) so it stays visible
+        // without scrolling no matter how many order lines are above it.
+        // Anchored bottom-left: the chatter docks on the right (o-aside,
+        // min 530px), so left avoids covering it. Collapsible so it
+        // doesn't permanently sit over the lines being edited.
+        this.state = useState({collapsed: false});
+    }
+
+    toggleCollapse() {
+        this.state.collapsed = !this.state.collapsed;
+    }
 
     get historyData() {
         const raw = this.props.record.data[this.props.name];
