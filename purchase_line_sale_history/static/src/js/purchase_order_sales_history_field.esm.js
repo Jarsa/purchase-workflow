@@ -105,5 +105,5 @@ export class PurchaseSalesHistoryField extends Component {
 registry.category("fields").add("purchase_sales_history", {
     component: PurchaseSalesHistoryField,
     // Only makes sense as a readonly/inline widget, never in edition mode.
-    supportedTypes: ["json", "jsonb"],
+    supportedTypes: ["json"],
 });

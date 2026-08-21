@@ -32,7 +32,7 @@ class PurchaseOrder(models.Model):
         # In the onchange environment the lines are NewId records while the
         # many2one holds the real id, so compare through _origin.
         new = (
-            active.filtered(lambda line: line != prev and line._origin != prev)[-1:]
+            active.filtered(lambda line: prev not in (line, line._origin))[-1:]
             or active[:1]
         )
         (active - new).show_sales_history = False
