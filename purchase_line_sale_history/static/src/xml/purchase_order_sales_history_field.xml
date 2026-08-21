@@ -43,12 +43,8 @@
                     </thead>
                     <tbody>
                         <t t-foreach="years" t-as="year" t-key="year">
-                            <tr
-                                t-attf-class="#{year_index % 2 === 1 ? 'o_row_odd' : 'o_row_even'}"
-                            >
-                                <td
-                                    t-attf-class="o_purchase_sales_history_sticky_col #{year_index % 2 === 1 ? 'o_row_odd' : 'o_row_even'}"
-                                >
+                            <tr>
+                                <td class="o_purchase_sales_history_sticky_col">
                                     <t t-esc="year" />
                                 </td>
                                 <t t-foreach="months" t-as="month" t-key="month_index">

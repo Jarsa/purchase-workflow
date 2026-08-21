@@ -1,6 +1,5 @@
 // Copyright 2026 Jarsa
 // License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
-// Odoo backend palette reference: primary #714B67
 
 // Floats over the form instead of sitting in the normal document flow:
 // with many order lines, an in-flow (or merely sticky-header) panel is
@@ -12,7 +11,11 @@
     right: 16px;
     bottom: 16px;
     z-index: $zindex-fixed;
-    width: 480px;
+    // The table decides the width: twelve months plus the totals fit without
+    // an inner horizontal scroll on any usual screen, and the panel shrinks
+    // on its own when fewer years are shown.
+    width: max-content;
+    min-width: 320px;
     max-width: calc(100vw - 32px);
     max-height: 70vh;
     display: flex;
@@ -20,13 +23,14 @@
     border: 1px solid $border-color;
     border-radius: 8px;
     background-color: $o-view-background-color;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 
     @include media-breakpoint-down(md) {
         left: 8px;
         right: 8px;
         bottom: 8px;
         width: auto;
+        min-width: 0;
         max-width: none;
     }
 
@@ -43,7 +47,7 @@
         cursor: pointer;
 
         &:hover {
-            background-color: darken($o-view-background-color, 3%);
+            background-color: rgba($body-color, 0.06);
         }
 
         .o_purchase_sales_history_header_text {
@@ -71,74 +75,77 @@
 
     .o_purchase_sales_history_scroll {
         overflow: auto;
-        padding: 0 12px 12px;
+        padding: 4px 12px 12px;
     }
 
     .o_purchase_sales_history_table {
-        font-size: 0.75rem;
-        border-collapse: collapse;
+        // Separate borders so that the frozen row and column keep their own
+        // background while the rest of the table scrolls underneath.
+        border-collapse: separate;
+        border-spacing: 0;
         margin-bottom: 0;
+        font-size: 0.75rem;
+        font-variant-numeric: tabular-nums;
 
         th,
         td {
             white-space: nowrap;
-            padding: 4px 10px;
+            padding: 3px 8px;
+            border: 0;
         }
 
         thead th {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+            background-color: $o-view-background-color;
             color: $text-muted;
             font-weight: 500;
             border-bottom: 1px solid $border-color;
         }
 
-        // Fixed "Year" column: solid background required so it never blends
-        // with the data cells scrolling behind it. Do NOT use a
-        // transparent/inherited background here.
+        // Frozen "Year" column: an opaque background is required so it never
+        // blends with the data cells scrolling behind it.
         .o_purchase_sales_history_sticky_col {
             position: sticky;
             left: 0;
             z-index: 2;
-            font-weight: 500;
             background-color: $o-view-background-color;
-            // Subtle right-edge shadow, only visible once content scrolls
-            // underneath — reinforces the "frozen column" affordance.
-            box-shadow: 2px 0 4px -1px rgba(0, 0, 0, 0.12);
+            font-weight: 500;
+            border-right: 1px solid $border-color;
         }
 
         thead .o_purchase_sales_history_sticky_col {
-            background-color: darken($o-view-background-color, 3%);
-        }
-
-        tbody .o_purchase_sales_history_sticky_col.o_row_even {
-            background-color: darken($o-view-background-color, 4%);
-        }
-
-        tbody .o_purchase_sales_history_sticky_col.o_row_odd {
-            background-color: darken($o-view-background-color, 1%);
-        }
-
-        tfoot .o_purchase_sales_history_sticky_col {
-            background-color: darken($o-view-background-color, 3%);
-        }
-
-        tbody tr.o_row_odd {
-            background-color: $o-view-background-color;
+            z-index: 4;
         }
 
         .o_purchase_sales_history_current_month {
             color: $o-brand-primary;
+            font-weight: 600;
         }
 
+        // The cell carries only its intensity in --heat; the tint is mixed
+        // here so it keeps its weight on both the light and the dark theme.
         .o_purchase_sales_history_cell {
             display: inline-block;
             min-width: 100%;
             border-radius: 3px;
-            padding: 0 4px;
+            padding: 0 6px;
+            background-color: color-mix(
+                in srgb,
+                $o-brand-primary calc(var(--heat, 0) * 55%),
+                transparent
+            );
         }
 
         .o_purchase_sales_history_total {
             border-left: 1px solid $border-color;
             font-weight: 600;
+        }
+
+        tfoot td {
+            border-top: 1px solid $border-color;
+            padding-top: 5px;
         }
 
         tfoot .o_purchase_sales_history_total {
