@@ -80,9 +80,9 @@ export class PurchaseSalesHistoryField extends Component {
         return Math.min(1, v / this.maxValue);
     }
 
+    /** The stylesheet owns the colour; the cell only carries its intensity. */
     cellStyle(year, monthIndex) {
-        const intensity = this.intensityFor(year, monthIndex);
-        return `background-color: rgba(113, 75, 103, ${(intensity * 0.16).toFixed(3)});`;
+        return `--heat: ${this.intensityFor(year, monthIndex).toFixed(3)};`;
     }
 
     rowTotal(year) {
