@@ -9,7 +9,6 @@ class PurchaseOrder(models.Model):
 
     sales_history_line_id = fields.Many2one(
         comodel_name="purchase.order.line",
-        string="Sales History Line",
         copy=False,
         help="Order line whose product sales history is displayed.",
     )

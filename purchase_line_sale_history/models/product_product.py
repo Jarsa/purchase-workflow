@@ -18,10 +18,10 @@ class ProductProduct(models.Model):
         from here instead of assembling the pivot again.
         """
         self.ensure_one()
-        years_back = int(
+        years_back = (
             self.env["ir.config_parameter"]
             .sudo()
-            .get_param("purchase_line_sale_history.years_back", 2)
+            .get_int("purchase_line_sale_history.years_back", 2)
         )
         month_names = get_month_names(
             "abbreviated", locale=babel_locale_parse(get_lang(self.env).code)
