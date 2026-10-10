@@ -4,7 +4,7 @@
     "name": "Purchase Line Sale History",
     "summary": "Show the sales history of a product while filling a "
     "purchase order line",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "Purchases",
     "website": "https://github.com/OCA/purchase-workflow",
     "author": "Jarsa, Odoo Community Association (OCA)",
