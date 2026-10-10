@@ -39,7 +39,5 @@ class PurchaseOrder(models.Model):
         for order in self:
             product = order.sales_history_line_id.product_id
             order.sales_history_data = (
-                product._get_sales_history_pivot(order.date_order)
-                if product
-                else False
+                product._get_sales_history_pivot(order.date_order) if product else False
             )
