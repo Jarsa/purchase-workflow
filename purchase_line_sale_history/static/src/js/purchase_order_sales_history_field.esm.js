@@ -1,4 +1,4 @@
-import {Component, useState} from "@odoo/owl";
+import {Component, proxy} from "@odoo/owl";
 import {registry} from "@web/core/registry";
 import {standardFieldProps} from "@web/views/fields/standard_field_props";
 
@@ -24,7 +24,7 @@ export class PurchaseSalesHistoryField extends Component {
         // Anchored bottom-left: the chatter docks on the right (o-aside,
         // min 530px), so left avoids covering it. Collapsible so it
         // doesn't permanently sit over the lines being edited.
-        this.state = useState({collapsed: false});
+        this.state = proxy({collapsed: false});
     }
 
     toggleCollapse() {
