@@ -1,10 +1,10 @@
-import {Component, proxy} from "@odoo/owl";
+import {Component, proxy, useProps} from "@odoo/owl";
 import {registry} from "@web/core/registry";
 import {standardFieldProps} from "@web/views/fields/standard_field_props";
 
 /**
- * Renders purchase.order.sales_history_data (Json field) as a
- * year x month pivot table. Expected shape:
+ * Renders a sales history pivot as a year x month table. Expected shape of
+ * `historyData`:
  * {
  *   "product_name": "...",
  *   "years": [2026, 2025, 2024],
@@ -13,10 +13,13 @@ import {standardFieldProps} from "@web/views/fields/standard_field_props";
  * }
  * `null` means "no data yet" (future month of the current year);
  * distinct from 0, which means "no sales that month".
+ *
+ * The pivot declares no props of its own so that it can be reused outside
+ * a field (a popover, a dialog): the subclass declares its props and tells
+ * where `historyData` comes from.
  */
-export class PurchaseSalesHistoryField extends Component {
+export class SalesHistoryPivot extends Component {
     static template = "purchase_line_sale_history.SalesHistoryField";
-    static props = {...standardFieldProps};
 
     setup() {
         // Floats over the form (fixed to the viewport) so it stays visible
@@ -31,12 +34,9 @@ export class PurchaseSalesHistoryField extends Component {
         this.state.collapsed = !this.state.collapsed;
     }
 
+    /** The pivot to render; the subclass says where it reads it from. */
     get historyData() {
-        const raw = this.props.record.data[this.props.name];
-        if (!raw) {
-            return null;
-        }
-        return typeof raw === "string" ? JSON.parse(raw) : raw;
+        return null;
     }
 
     get years() {
@@ -99,6 +99,22 @@ export class PurchaseSalesHistoryField extends Component {
 
     get grandTotal() {
         return this.years.reduce((acc, year) => acc + this.rowTotal(year), 0);
+    }
+}
+
+/**
+ * Renders purchase.order.sales_history_data (Json field) with the pivot.
+ */
+export class PurchaseSalesHistoryField extends SalesHistoryPivot {
+    // OWL 3 only reads the props declared through useProps.
+    props = useProps({...standardFieldProps});
+
+    get historyData() {
+        const raw = this.props.record.data[this.props.name];
+        if (!raw) {
+            return null;
+        }
+        return typeof raw === "string" ? JSON.parse(raw) : raw;
     }
 }
 
