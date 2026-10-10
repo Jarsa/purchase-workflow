@@ -24,10 +24,7 @@
                     role="img"
                 />
             </button>
-            <div
-                class="o_purchase_sales_history_scroll"
-                t-if="!this.state.collapsed"
-            >
+            <div t-if="!this.state.collapsed" class="o_purchase_sales_history_scroll">
                 <table class="table table-sm o_purchase_sales_history_table">
                     <thead>
                         <tr>
@@ -49,7 +46,11 @@
                                 <td class="o_purchase_sales_history_sticky_col">
                                     <t t-out="year" />
                                 </td>
-                                <t t-foreach="this.months" t-as="month" t-key="month_index">
+                                <t
+                                    t-foreach="this.months"
+                                    t-as="month"
+                                    t-key="month_index"
+                                >
                                     <td class="text-end">
                                         <t
                                             t-set="value"
@@ -95,7 +96,7 @@
                 </table>
             </div>
         </div>
-        <div class="text-muted small fst-italic" t-else="">
+        <div t-else="" class="text-muted small fst-italic">
             Check the Sales History box on a line to see its product's sales history.
         </div>
     </t>
