@@ -433,3 +433,43 @@ class TestPurchaseRequestToRfq(common.TransactionCase):
             }
         )
         self.assertEqual(purchase_request_line.supplier_id, vendor4)
+
+    def test_purchase_request_receipt_message_is_note(self):
+        follower = common.new_test_user(
+            self.env,
+            login="pr_receipt_follower",
+            groups="base.group_user",
+            notification_type="email",
+        )
+        purchase_request = self.purchase_request.create(
+            {
+                "picking_type_id": self.env.ref("stock.picking_type_in").id,
+                "requested_by": SUPERUSER_ID,
+            }
+        )
+        purchase_request.message_subscribe(partner_ids=follower.partner_id.ids)
+        purchase_request_line = self.purchase_request_line.create(
+            {
+                "request_id": purchase_request.id,
+                "product_id": self.product_product.id,
+                "product_uom_id": self.env.ref("uom.product_uom_unit").id,
+                "product_qty": 2.0,
+            }
+        )
+        purchase_request.button_approved()
+        wiz_id = self.wiz.with_context(
+            active_model="purchase.request.line",
+            active_ids=purchase_request_line.ids,
+        ).create({"supplier_id": self.env.ref("base.res_partner_1").id})
+        wiz_id.make_purchase_order()
+        purchase = purchase_request_line.purchase_lines.order_id
+        purchase.button_confirm()
+        picking = purchase.picking_ids
+        picking.move_line_ids.write({"quantity": 2.0})
+        picking.button_validate()
+        message = purchase_request.message_ids.filtered(
+            lambda m: picking.name in m.body
+        )
+        self.assertTrue(message)
+        self.assertEqual(message.subtype_id, self.env.ref("mail.mt_note"))
+        self.assertNotIn(follower.partner_id, message.notified_partner_ids)
