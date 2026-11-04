@@ -32,8 +32,15 @@ Purchase Product Code Remove
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-Removes default code brackets from the beginning of purchase order line
-description.
+Removes the product internal reference (default code) in brackets from
+the description of purchase order lines, so requests for quotation,
+purchase orders and their PDF report only show the product name. The
+vendor product code, when it is set on the vendor pricelist, is still
+shown.
+
+Vendor bill lines created from purchase orders also show the product
+name without the internal reference. Vendor bills created manually keep
+the standard Odoo behavior.
 
 **Table of contents**
 
@@ -43,8 +50,12 @@ description.
 Usage
 =====
 
-Add a product in the purchase order line, then the description of the
-product will be displayed without the default code.
+Add a product with an internal reference to a purchase order line. The
+description of the line will show the product name without the internal
+reference.
+
+Confirm the purchase order and create the vendor bill. The bill lines
+will also show the product name without the internal reference.
 
 Bug Tracker
 ===========
@@ -68,6 +79,7 @@ Contributors
 ------------
 
 - Alan Ramos <alan.ramos@jarsa.com>
+- Hector Meraz <hector.meraz@jarsa.com>
 
 Maintainers
 -----------
