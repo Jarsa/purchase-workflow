@@ -1,0 +1,12 @@
+[project]
+name = "odoo-addons-oca-purchase-workflow"
+version = "20.0.20261102.0"
+dependencies = [
+    "odoo-addon-purchase_all_shipments==20.0.*",
+    "odoo-addon-purchase_order_internal_note==20.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 20.0",
+]
